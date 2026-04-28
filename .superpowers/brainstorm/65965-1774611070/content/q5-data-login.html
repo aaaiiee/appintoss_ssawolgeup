@@ -1,0 +1,43 @@
+<h2>🔐 데이터 저장 & 로그인</h2>
+<p class="subtitle">사용자 데이터를 어디에 저장하고, 로그인은 어떻게 할까요?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>📱 로컬 전용 (서버 없음)</h3>
+      <p>토스 SDK Storage API로 기기 내 저장. 로그인 없이 바로 사용</p>
+      <ul style="font-size:0.9em;color:#888;">
+        <li>✅ 서버 비용 0원, 개발 빠름</li>
+        <li>❌ 기기 변경 시 데이터 소멸, 랭킹 불가</li>
+        <li>❌ 보상형 광고/토스포인트 지급에 로그인 필요할 수 있음</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>☁️ 서버 연동 + 토스 로그인 (추천)</h3>
+      <p>토스 OAuth 로그인 → Supabase/Vercel 서버에 데이터 저장</p>
+      <ul style="font-size:0.9em;color:#888;">
+        <li>✅ 랭킹, 크로스 디바이스, 프로모션 리워드 가능</li>
+        <li>✅ 인트로 화면 후 로그인 (심사 규칙 준수)</li>
+        <li>❌ 서버 구축 필요 (Vercel 무료 플랜으로 시작 가능)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>🔀 하이브리드 (게스트 + 로그인)</h3>
+      <p>처음엔 로컬 저장(게스트)으로 사용 → 랭킹/리워드 원하면 토스 로그인</p>
+      <ul style="font-size:0.9em;color:#888;">
+        <li>✅ 진입 허들 최저, 필요할 때 로그인</li>
+        <li>✅ 게스트 → 로그인 전환 시 데이터 마이그레이션</li>
+        <li>❌ 두 가지 상태 관리 복잡도 증가</li>
+      </ul>
+    </div>
+  </div>
+</div>

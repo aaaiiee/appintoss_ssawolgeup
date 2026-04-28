@@ -1,0 +1,284 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774697490926,
+  "projectRoot": "/Users/openmacm4/Downloads/Dev/appintoss_6",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.3",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.3",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "6.0.0",
+        "category": "build"
+      },
+      {
+        "name": "vitest",
+        "version": "4.0.18",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "bun build",
+    "testCommand": "bun test",
+    "lintCommand": "bun lint",
+    "devCommand": "bun dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "build:dev": "vite build --mode development",
+      "lint": "eslint .",
+      "preview": "vite preview",
+      "test": "vitest run",
+      "test:watch": "vitest"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "public",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "api": {
+      "path": "api",
+      "purpose": "API routes",
+      "fileCount": 4,
+      "lastAccessed": 1774697490865,
+      "keyFiles": [
+        "achievements.ts",
+        "check-in.ts",
+        "check-ins.ts",
+        "ranking.ts"
+      ]
+    },
+    "apps-in-toss-examples-robin": {
+      "path": "apps-in-toss-examples-robin",
+      "purpose": null,
+      "fileCount": 11,
+      "lastAccessed": 1774697490867,
+      "keyFiles": [
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "CONTRIBUTING.md",
+        "LICENSE"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 4,
+      "lastAccessed": 1774697490909,
+      "keyFiles": [
+        "favicon.ico",
+        "index.html",
+        "placeholder.svg",
+        "robots.txt"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 2,
+      "lastAccessed": 1774697490910,
+      "keyFiles": [
+        "harness-engineering-guide.md",
+        "토스공식문서.md"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 3,
+      "lastAccessed": 1774697490911,
+      "keyFiles": [
+        "favicon.ico",
+        "placeholder.svg",
+        "robots.txt"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 5,
+      "lastAccessed": 1774697490913,
+      "keyFiles": [
+        "App.css",
+        "App.tsx",
+        "index.css",
+        "main.tsx",
+        "vite-env.d.ts"
+      ]
+    },
+    "supabase": {
+      "path": "supabase",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774697490913,
+      "keyFiles": []
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1774697490914,
+      "keyFiles": [
+        "index-CIZRRSX6.css",
+        "index-CLw544sK.js",
+        "index-DpthDdVp.js"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1774697490915,
+      "keyFiles": [
+        "crimson-phantom.png",
+        "hero-bg-shape.png",
+        "logo.png"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1774697490915,
+      "keyFiles": []
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 6,
+      "lastAccessed": 1774697490916,
+      "keyFiles": [
+        "achievements.ts",
+        "api.ts",
+        "calculations.ts"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 7,
+      "lastAccessed": 1774697490916,
+      "keyFiles": [
+        "Home.tsx",
+        "Intro.tsx",
+        "Ranking.tsx"
+      ]
+    },
+    "supabase/migrations": {
+      "path": "supabase/migrations",
+      "purpose": "Database migrations",
+      "fileCount": 1,
+      "lastAccessed": 1774697490916,
+      "keyFiles": [
+        "001_initial_schema.sql"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/lib/api.ts",
+      "accessCount": 10,
+      "lastAccessed": 1774699851928,
+      "type": "directory"
+    },
+    {
+      "path": "src/components/home/CheckInButton.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774698425477,
+      "type": "file"
+    },
+    {
+      "path": "src/components/home/EarningsCard.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774698432391,
+      "type": "file"
+    },
+    {
+      "path": "src/components/stats/AttendanceCalendar.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774699074058,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Reward.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1774698342836,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills",
+      "accessCount": 1,
+      "lastAccessed": 1774697821947,
+      "type": "directory"
+    },
+    {
+      "path": ".claude/skills/appintoss-login/assets/terms-template.md",
+      "accessCount": 1,
+      "lastAccessed": 1774697826423,
+      "type": "file"
+    },
+    {
+      "path": "docs/terms-of-service.md",
+      "accessCount": 1,
+      "lastAccessed": 1774697916454,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ui/calendar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774699017573,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Timer.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774700153492,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

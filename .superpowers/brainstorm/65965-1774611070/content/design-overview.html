@@ -1,0 +1,204 @@
+<h2>📐 싸월급 — 전체 설계 개요</h2>
+<p class="subtitle">각 섹션을 검토하고 수정할 부분이 있으면 말씀해주세요</p>
+
+<!-- 1. 시스템 아키텍처 -->
+<div class="section">
+  <h3>1. 시스템 아키텍처</h3>
+  <div class="mockup">
+    <div class="mockup-header">System Architecture</div>
+    <div class="mockup-body" style="text-align:center;padding:24px;">
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;align-items:start;">
+        <!-- Client -->
+        <div style="background:#2d2d5e;border:2px solid #6366f1;border-radius:12px;padding:16px;min-width:180px;">
+          <div style="font-weight:bold;color:#6366f1;margin-bottom:8px;">📱 Client (Toss WebView)</div>
+          <div style="font-size:0.8em;color:#aaa;text-align:left;">
+            • Vite + React 19 + TS<br/>
+            • Tailwind 4 + shadcn-ui<br/>
+            • @apps-in-toss/web-framework<br/>
+            • react-router-dom<br/>
+            • recharts (통계 그래프)<br/>
+            • framer-motion (애니메이션)
+          </div>
+        </div>
+        <!-- Arrow -->
+        <div style="display:flex;align-items:center;font-size:1.5em;color:#888;">→</div>
+        <!-- Server -->
+        <div style="background:#2d3e2d;border:2px solid #4CAF50;border-radius:12px;padding:16px;min-width:180px;">
+          <div style="font-weight:bold;color:#4CAF50;margin-bottom:8px;">⚡ Vercel Serverless</div>
+          <div style="font-size:0.8em;color:#aaa;text-align:left;">
+            • API Routes (/api/*)<br/>
+            • 토스 OAuth 토큰 교환<br/>
+            • mTLS 인증서 처리<br/>
+            • 프로모션 API 호출<br/>
+            • JWT 발급/검증
+          </div>
+        </div>
+        <!-- Arrow -->
+        <div style="display:flex;align-items:center;font-size:1.5em;color:#888;">→</div>
+        <!-- DB -->
+        <div style="background:#3e2d2d;border:2px solid #FF6B35;border-radius:12px;padding:16px;min-width:180px;">
+          <div style="font-weight:bold;color:#FF6B35;margin-bottom:8px;">🗄️ Supabase</div>
+          <div style="font-size:0.8em;color:#aaa;text-align:left;">
+            • PostgreSQL (사용자, 출석, 코인)<br/>
+            • Row Level Security<br/>
+            • Realtime (랭킹 업데이트)<br/>
+            • Edge Functions (선택)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 화면 플로우 -->
+<div class="section">
+  <h3>2. 화면 플로우 (7 Screens)</h3>
+  <div class="mockup">
+    <div class="mockup-header">Screen Flow</div>
+    <div class="mockup-body" style="padding:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;">
+        <div style="background:#6366f1;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🎬 인트로</div>
+        <span style="color:#888;">→</span>
+        <div style="background:#6366f1;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🔐 토스 로그인</div>
+        <span style="color:#888;">→</span>
+        <div style="background:#FF6B35;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🏠 홈</div>
+        <span style="color:#888;">↔</span>
+        <div style="background:#4CAF50;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">⏱️ 타이머</div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-top:12px;">
+        <div style="background:#FF6B35;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🏠 홈</div>
+        <span style="color:#888;">↔</span>
+        <div style="background:#9C27B0;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">📊 통계</div>
+        <span style="color:#888;">↔</span>
+        <div style="background:#FF9800;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🏆 랭킹</div>
+        <span style="color:#888;">↔</span>
+        <div style="background:#E91E63;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">🎁 리워드</div>
+        <span style="color:#888;">↔</span>
+        <div style="background:#607D8B;padding:10px 16px;border-radius:8px;font-weight:bold;font-size:0.85em;">⚙️ 설정</div>
+      </div>
+      <p style="color:#888;font-size:0.85em;text-align:center;margin-top:12px;">
+        홈이 중심 허브. 하단 탭바(홈/통계/랭킹/리워드/설정)로 이동. 타이머는 홈에서 진입.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- 3. 데이터 모델 -->
+<div class="section">
+  <h3>3. 핵심 데이터 모델</h3>
+  <div class="mockup">
+    <div class="mockup-header">Database Schema (Supabase PostgreSQL)</div>
+    <div class="mockup-body" style="padding:16px;font-size:0.85em;font-family:monospace;">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;">
+        <div style="flex:1;min-width:200px;">
+          <div style="color:#6366f1;font-weight:bold;margin-bottom:4px;">👤 users</div>
+          <div style="color:#aaa;">
+            id (uuid, PK)<br/>
+            toss_user_id (unique)<br/>
+            nickname (varchar)<br/>
+            hourly_wage (integer)<br/>
+            poop_coins (integer, default 0)<br/>
+            streak_days (integer, default 0)<br/>
+            created_at (timestamptz)
+          </div>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <div style="color:#4CAF50;font-weight:bold;margin-bottom:4px;">✅ check_ins</div>
+          <div style="color:#aaa;">
+            id (uuid, PK)<br/>
+            user_id (FK → users)<br/>
+            started_at (timestamptz)<br/>
+            ended_at (timestamptz, nullable)<br/>
+            duration_seconds (integer)<br/>
+            earned_amount (integer)<br/>
+            coins_earned (integer)<br/>
+            mode ('quick' | 'timer')
+          </div>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <div style="color:#FF6B35;font-weight:bold;margin-bottom:4px;">🎁 rewards</div>
+          <div style="color:#aaa;">
+            id (uuid, PK)<br/>
+            user_id (FK → users)<br/>
+            type ('ad' | 'streak' | 'achievement')<br/>
+            coins_amount (integer)<br/>
+            toss_points (integer, nullable)<br/>
+            created_at (timestamptz)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. 핵심 비즈니스 로직 -->
+<div class="section">
+  <h3>4. 핵심 비즈니스 로직</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;">
+    <div style="flex:1;min-width:250px;background:#1a1a2e;padding:16px;border-radius:12px;">
+      <div style="color:#6366f1;font-weight:bold;margin-bottom:8px;">💵 시급 계산 공식</div>
+      <div style="font-size:0.85em;color:#ccc;">
+        <code>번 돈 = (시급 ÷ 3600) × 화장실_초</code><br/><br/>
+        • 원탭 모드: 기본 5분(300초) 적용<br/>
+        • 타이머 모드: 실제 측정 시간<br/>
+        • 시급 미입력 시: 한국 최저시급(9,860원) 기본값
+      </div>
+    </div>
+    <div style="flex:1;min-width:250px;background:#1a1a2e;padding:16px;border-radius:12px;">
+      <div style="color:#4CAF50;font-weight:bold;margin-bottom:8px;">🪙 똥코인 적립 규칙</div>
+      <div style="font-size:0.85em;color:#ccc;">
+        • 원탭 체크인: +10 코인<br/>
+        • 타이머 체크인: +10 + (분 수 × 2) 코인<br/>
+        • 연속 출석 보너스:<br/>
+        &nbsp;&nbsp;3일: ×1.5배 / 7일: ×2배 / 30일: ×3배<br/>
+        • 하루 최대 3회 체크인
+      </div>
+    </div>
+    <div style="flex:1;min-width:250px;background:#1a1a2e;padding:16px;border-radius:12px;">
+      <div style="color:#FF6B35;font-weight:bold;margin-bottom:8px;">🎁 리워드 시스템</div>
+      <div style="font-size:0.85em;color:#ccc;">
+        • 보상형 광고 1회: +50 코인 + 토스포인트<br/>
+        • 하루 광고 시청 제한: 3회<br/>
+        • 업적 달성 보너스:<br/>
+        &nbsp;&nbsp;"첫 출석": +100 코인<br/>
+        &nbsp;&nbsp;"일주일 연속": +500 코인<br/>
+        &nbsp;&nbsp;"100회 달성": +2000 코인
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. 토스 심사 대응 -->
+<div class="section">
+  <h3>5. 토스 심사 대응 (CLAUDE.md 규칙 준수)</h3>
+  <div style="background:#1a1a2e;padding:16px;border-radius:12px;font-size:0.85em;">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <div style="flex:1;min-width:200px;">
+        <div style="color:#4CAF50;font-weight:bold;">✅ 반영 완료</div>
+        <ul style="color:#ccc;margin:4px 0;">
+          <li>인트로 화면 후 로그인 (앱 시작 시 로그인 금지)</li>
+          <li>공통 네비게이션바 사용 (자체 헤더 없음)</li>
+          <li>viewport user-scalable=no</li>
+          <li>앱 이름 한글 통일 "싸월급"</li>
+          <li>SDK dynamic import + isSupported</li>
+          <li>alert/confirm/prompt 미사용 → shadcn Dialog</li>
+          <li>OAuth 토큰 서버에서만 처리</li>
+          <li>연동 해제 콜백 처리</li>
+        </ul>
+      </div>
+      <div style="flex:1;min-width:200px;">
+        <div style="color:#FF6B35;font-weight:bold;">⚠️ 구현 시 주의</div>
+        <ul style="color:#ccc;margin:4px 0;">
+          <li>공유 시 getTossShareLink() 사용</li>
+          <li>외부 링크 없이 앱 내 완결</li>
+          <li>광고 load → show 순서 필수</li>
+          <li>기능 스킴 URL 전부 유효 페이지</li>
+          <li>브랜딩(이름/색상/로고) 전체 일치</li>
+          <li>첫 화면 백버튼 = 앱 종료</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;text-align:center;">이 설계가 괜찮으면 <strong>"OK"</strong>, 수정할 부분이 있으면 말씀해주세요!</p>

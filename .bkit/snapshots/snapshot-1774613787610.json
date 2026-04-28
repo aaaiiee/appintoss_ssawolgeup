@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-03-27T12:16:27.609Z",
+  "reason": "compaction",
+  "status": {
+    "version": "3.0",
+    "lastUpdated": "2026-03-27T11:23:58.795Z",
+    "activeFeatures": [
+      "apps-in-toss-fullstack-templates",
+      "ui"
+    ],
+    "primaryFeature": "apps-in-toss-fullstack-templates",
+    "features": {
+      "apps-in-toss-fullstack-templates": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-08T16:14:21.988Z",
+          "lastUpdated": "2026-03-08T16:14:21.988Z"
+        },
+        "lastFile": "C:\\Users\\hpcra\\apps-in-toss-fullstack-templates\\vite.config.ts",
+        "stateMachine": {
+          "currentState": "do",
+          "previousState": null,
+          "stateHistory": [],
+          "retryCount": 0,
+          "maxRetries": 5,
+          "circuitBreakerOpen": false
+        },
+        "metrics": {
+          "qualityScore": null,
+          "conventionCompliance": null,
+          "apiCompliance": null,
+          "cycleTimeMs": null,
+          "iterationEfficiency": null
+        },
+        "phaseTimestamps": {},
+        "automationLevel": 2
+      },
+      "ui": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-08T16:17:42.661Z",
+          "lastUpdated": "2026-03-08T16:19:57.836Z"
+        },
+        "lastFile": "C:\\Users\\hpcra\\apps-in-toss-fullstack-templates\\src\\components\\ui\\textarea.tsx",
+        "stateMachine": {
+          "currentState": "do",
+          "previousState": null,
+          "stateHistory": [],
+          "retryCount": 0,
+          "maxRetries": 5,
+          "circuitBreakerOpen": false
+        },
+        "metrics": {
+          "qualityScore": null,
+          "conventionCompliance": null,
+          "apiCompliance": null,
+          "cycleTimeMs": null,
+          "iterationEfficiency": null
+        },
+        "phaseTimestamps": {},
+        "automationLevel": 2
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-03-08T14:40:18.061Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-03-27T11:23:58.795Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-08T16:14:21.988Z",
+        "feature": "apps-in-toss-fullstack-templates",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:17:42.661Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:19:56.862Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:19:57.836Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      }
+    ],
+    "stateMachine": {
+      "defaultWorkflow": "default",
+      "activeWorkflows": {},
+      "totalTransitions": 0
+    },
+    "automation": {
+      "globalLevel": 2,
+      "trustScore": 40,
+      "pendingApprovals": 0,
+      "lastGateResult": null
+    },
+    "team": {
+      "enabled": true,
+      "stateFile": ".bkit/runtime/agent-state.json",
+      "eventsFile": ".bkit/runtime/agent-events.jsonl"
+    }
+  }
+}

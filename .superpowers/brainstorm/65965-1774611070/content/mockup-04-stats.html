@@ -1,0 +1,176 @@
+<h2>📱 화면 4/7 — 통계/히스토리</h2>
+<p class="subtitle">캘린더 + 그래프로 내 "투자 실적"을 보여주는 화면</p>
+
+<div class="split">
+  <!-- 목업 A -->
+  <div class="mockup" style="cursor:pointer;" data-choice="a" onclick="toggleSelect(this)">
+    <div class="mockup-header">A) 캘린더 + 그래프</div>
+    <div class="mockup-body" style="background:#0A0A0A;min-height:560px;display:flex;flex-direction:column;padding:0;overflow:hidden;">
+      <!-- Nav -->
+      <div style="background:#111;padding:12px 16px;text-align:center;">
+        <span style="font-weight:bold;color:#fff;">📊 통계</span>
+      </div>
+
+      <div style="padding:16px;flex:1;overflow-y:auto;">
+        <!-- 월간 요약 -->
+        <div style="display:flex;gap:8px;margin-bottom:16px;">
+          <div style="flex:1;background:#1a1a2e;border-radius:12px;padding:12px;text-align:center;">
+            <div style="color:#888;font-size:0.7em;">이번 달 총 수익</div>
+            <div style="color:#FF6B35;font-weight:bold;font-size:1.2em;">₩ 87,500</div>
+          </div>
+          <div style="flex:1;background:#1a1a2e;border-radius:12px;padding:12px;text-align:center;">
+            <div style="color:#888;font-size:0.7em;">총 출석일</div>
+            <div style="color:#4CAF50;font-weight:bold;font-size:1.2em;">18일</div>
+          </div>
+          <div style="flex:1;background:#1a1a2e;border-radius:12px;padding:12px;text-align:center;">
+            <div style="color:#888;font-size:0.7em;">총 시간</div>
+            <div style="color:#6366f1;font-weight:bold;font-size:1.2em;">3.5h</div>
+          </div>
+        </div>
+
+        <!-- 캘린더 -->
+        <div style="background:#111;border-radius:12px;padding:12px;margin-bottom:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <span style="color:#888;font-size:0.85em;">←</span>
+            <span style="color:#fff;font-weight:bold;font-size:0.9em;">2026년 3월</span>
+            <span style="color:#888;font-size:0.85em;">→</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;font-size:0.7em;">
+            <div style="color:#888;">일</div><div style="color:#888;">월</div><div style="color:#888;">화</div><div style="color:#888;">수</div><div style="color:#888;">목</div><div style="color:#888;">금</div><div style="color:#888;">토</div>
+            <div style="color:#444;">23</div><div style="color:#444;">24</div><div style="color:#444;">25</div><div style="color:#444;">26</div><div style="color:#444;">27</div><div style="color:#444;">28</div><div style="color:#444;">1</div>
+            <div style="color:#666;">2</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">3</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">4</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">5</div><div style="color:#666;">6</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">7</div><div style="color:#666;">8</div>
+            <div style="color:#666;">9</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">10</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">11</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">12</div><div style="color:#fff;background:#4CAF50;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">13</div><div style="color:#fff;background:#FF6B35;border-radius:50%;width:22px;height:22px;line-height:22px;margin:auto;">14</div><div style="color:#666;">15</div>
+          </div>
+          <div style="display:flex;gap:12px;margin-top:8px;justify-content:center;">
+            <div style="display:flex;align-items:center;gap:4px;font-size:0.65em;color:#888;"><div style="width:8px;height:8px;background:#FF6B35;border-radius:50%;"></div>출석</div>
+            <div style="display:flex;align-items:center;gap:4px;font-size:0.65em;color:#888;"><div style="width:8px;height:8px;background:#4CAF50;border-radius:50%;"></div>오늘</div>
+          </div>
+        </div>
+
+        <!-- 주간 그래프 -->
+        <div style="background:#111;border-radius:12px;padding:12px;">
+          <div style="color:#fff;font-size:0.85em;font-weight:bold;margin-bottom:8px;">주간 수익 추이</div>
+          <div style="display:flex;align-items:flex-end;gap:6px;height:80px;">
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#FF6B35;width:100%;height:40px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">월</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#FF6B35;width:100%;height:55px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">화</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#FF6B35;width:100%;height:30px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">수</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#FF6B35;width:100%;height:70px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">목</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#3182F6;width:100%;height:50px;border-radius:4px 4px 0 0;"></div><div style="color:#fff;font-size:0.6em;">금</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#333;width:100%;height:10px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">토</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="background:#333;width:100%;height:10px;border-radius:4px 4px 0 0;"></div><div style="color:#666;font-size:0.6em;">일</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 하단 탭바 -->
+      <div style="background:#111;padding:8px 0;display:flex;justify-content:space-around;border-top:1px solid #222;">
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🏠</div>홈</div>
+        <div style="text-align:center;color:#3182F6;font-size:0.7em;"><div style="font-size:1.5em;">📊</div>통계</div>
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🏆</div>랭킹</div>
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🎁</div>리워드</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 목업 B -->
+  <div class="mockup" style="cursor:pointer;" data-choice="b" onclick="toggleSelect(this)">
+    <div class="mockup-header">B) 투자앱 패러디</div>
+    <div class="mockup-body" style="background:#0A0A0A;min-height:560px;display:flex;flex-direction:column;padding:0;overflow:hidden;">
+      <!-- Nav -->
+      <div style="background:#111;padding:12px 16px;text-align:center;">
+        <span style="font-weight:bold;color:#fff;">📊 내 포트폴리오</span>
+      </div>
+
+      <div style="padding:16px;flex:1;overflow-y:auto;">
+        <!-- 투자앱 스타일 총 자산 -->
+        <div style="margin-bottom:20px;">
+          <div style="color:#888;font-size:0.8em;">총 싸월급 자산</div>
+          <div style="color:#fff;font-size:2em;font-weight:bold;">₩ 1,247,500</div>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:4px;">
+            <span style="color:#4CAF50;font-size:0.85em;">▲ ₩ 87,500 (이번 달)</span>
+            <span style="background:#1a3a1a;color:#4CAF50;padding:2px 8px;border-radius:4px;font-size:0.75em;">+7.5%</span>
+          </div>
+        </div>
+
+        <!-- 투자 수익률 그래프 (패러디) -->
+        <div style="background:#111;border-radius:12px;padding:16px;margin-bottom:16px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;">
+              <span style="color:#3182F6;font-size:0.75em;font-weight:bold;border-bottom:2px solid #3182F6;padding-bottom:2px;">1주</span>
+              <span style="color:#666;font-size:0.75em;">1달</span>
+              <span style="color:#666;font-size:0.75em;">3달</span>
+              <span style="color:#666;font-size:0.75em;">전체</span>
+            </div>
+          </div>
+          <!-- 라인 그래프 시뮬레이션 -->
+          <svg viewBox="0 0 300 80" style="width:100%;height:80px;">
+            <polyline points="0,70 50,55 100,60 150,40 200,35 250,20 300,25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+            <circle cx="300" cy="25" r="4" fill="#4CAF50"/>
+          </svg>
+        </div>
+
+        <!-- 자산 구성 (패러디) -->
+        <div style="background:#111;border-radius:12px;padding:12px;margin-bottom:16px;">
+          <div style="color:#fff;font-size:0.85em;font-weight:bold;margin-bottom:8px;">자산 구성</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:10px;height:10px;background:#FF6B35;border-radius:2px;"></div>
+                <span style="color:#ccc;font-size:0.85em;">싸월급 수익</span>
+              </div>
+              <span style="color:#fff;font-size:0.85em;font-weight:bold;">₩ 1,247,500</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:10px;height:10px;background:#FFD700;border-radius:2px;"></div>
+                <span style="color:#ccc;font-size:0.85em;">똥코인</span>
+              </div>
+              <span style="color:#fff;font-size:0.85em;font-weight:bold;">2,450 🪙</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:10px;height:10px;background:#3182F6;border-radius:2px;"></div>
+                <span style="color:#ccc;font-size:0.85em;">토스포인트</span>
+              </div>
+              <span style="color:#fff;font-size:0.85em;font-weight:bold;">1,200 P</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 재미 통계 -->
+        <div style="background:#1a1a2e;border-radius:12px;padding:12px;">
+          <div style="color:#6366f1;font-size:0.85em;font-weight:bold;margin-bottom:8px;">💡 싸월급 인사이트</div>
+          <div style="color:#ccc;font-size:0.8em;line-height:1.6;">
+            • 올해 총 화장실 시간: <strong style="color:#FF6B35;">42시간 30분</strong><br/>
+            • 치킨 환산: <strong style="color:#FF6B35;">62.5마리</strong> 🍗<br/>
+            • 전체 사용자 중 상위 <strong style="color:#4CAF50;">23%</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- 하단 탭바 -->
+      <div style="background:#111;padding:8px 0;display:flex;justify-content:space-around;border-top:1px solid #222;">
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🏠</div>홈</div>
+        <div style="text-align:center;color:#3182F6;font-size:0.7em;"><div style="font-size:1.5em;">📊</div>통계</div>
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🏆</div>랭킹</div>
+        <div style="text-align:center;color:#666;font-size:0.7em;"><div style="font-size:1.5em;">🎁</div>리워드</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px;">A) 실용적 캘린더 + 바 그래프 vs B) 투자앱 패러디 ("총 싸월급 자산 ₩1,247,500 ▲+7.5%", 치킨 환산)</p>

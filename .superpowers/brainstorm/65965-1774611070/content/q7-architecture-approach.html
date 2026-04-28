@@ -1,0 +1,89 @@
+<h2>🏗️ 아키텍처 접근법</h2>
+<p class="subtitle">브레인스토밍 결과를 기반으로 3가지 구현 방식을 제안합니다</p>
+
+<div class="section" style="background:#1a1a2e;padding:16px;border-radius:12px;margin-bottom:20px;">
+  <h3 style="margin-top:0;">📋 확정된 기획</h3>
+  <table style="width:100%;font-size:0.9em;border-collapse:collapse;">
+    <tr><td style="padding:4px 8px;color:#888;">앱 이름</td><td style="padding:4px 8px;"><strong>싸월급</strong> — B급 유머 밈 감성</td></tr>
+    <tr><td style="padding:4px 8px;color:#888;">핵심 메커니즘</td><td style="padding:4px 8px;">시급 계산 + 똥코인 + 광고 리워드 (복합형)</td></tr>
+    <tr><td style="padding:4px 8px;color:#888;">체크인</td><td style="padding:4px 8px;">원탭 간편 + 타이머 프로 모드 (하이브리드)</td></tr>
+    <tr><td style="padding:4px 8px;color:#888;">화면</td><td style="padding:4px 8px;">7개 전체 (인트로, 홈, 타이머, 통계, 랭킹, 리워드, 설정)</td></tr>
+    <tr><td style="padding:4px 8px;color:#888;">데이터</td><td style="padding:4px 8px;">토스 로그인 + 서버(Supabase) 저장</td></tr>
+    <tr><td style="padding:4px 8px;color:#888;">범위</td><td style="padding:4px 8px;">풀 스펙 + 공유 바이럴 + 푸시 알림 + 토스포인트</td></tr>
+  </table>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>🟢 SPA + Supabase + Vercel Serverless</h3>
+      <p>현재 보일러플레이트(Vite+React) 그대로 활용 + Supabase DB/Auth + Vercel API Routes</p>
+      <div class="pros-cons" style="margin-top:8px;">
+        <div class="pros"><h4 style="margin:0;">장점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>기존 프로젝트 구조 100% 활용</li>
+            <li>Supabase 무료 플랜으로 시작</li>
+            <li>Vercel 무료 배포 + 서버리스 API</li>
+            <li>mTLS 인증서는 Vercel에서 처리</li>
+          </ul>
+        </div>
+        <div class="cons"><h4 style="margin:0;">단점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>Cold start 지연 가능</li>
+            <li>복잡한 실시간 기능에 한계</li>
+          </ul>
+        </div>
+      </div>
+      <p style="color:#4CAF50;font-size:0.9em;margin-top:8px;">⭐ 추천: 비용 0원 시작, 검증된 앱인토스 패턴</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>🔵 SPA + bkend.ai BaaS</h3>
+      <p>bkend.ai MCP로 DB/Auth/Storage 전부 처리. 서버 코드 최소화</p>
+      <div class="pros-cons" style="margin-top:8px;">
+        <div class="pros"><h4 style="margin:0;">장점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>서버 코드 거의 불필요</li>
+            <li>MCP 도구로 빠른 DB 설계</li>
+            <li>Auth/RBAC 내장</li>
+          </ul>
+        </div>
+        <div class="cons"><h4 style="margin:0;">단점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>토스 OAuth mTLS 처리에 별도 서버 필요</li>
+            <li>프로모션 API 호출에 커스텀 서버 필요</li>
+            <li>bkend.ai 플랫폼 의존</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>🟣 Next.js 풀스택</h3>
+      <p>Next.js App Router로 마이그레이션. SSR + API Routes + Supabase</p>
+      <div class="pros-cons" style="margin-top:8px;">
+        <div class="pros"><h4 style="margin:0;">장점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>SSR로 SEO + 초기 로딩 최적화</li>
+            <li>API Routes 내장 (별도 서버 불필요)</li>
+            <li>풀스택 단일 프로젝트</li>
+          </ul>
+        </div>
+        <div class="cons"><h4 style="margin:0;">단점</h4>
+          <ul style="font-size:0.9em;margin:4px 0;">
+            <li>기존 Vite 프로젝트 마이그레이션 필요</li>
+            <li>앱인토스 granite.config 호환 확인 필요</li>
+            <li>과도한 구조일 수 있음 (미니앱에 SSR 불필요)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<h2>🚽 체크인(출석) 방식은 어떻게?</h2>
+<p class="subtitle">사용자가 "지금 똥싸러 감"을 어떻게 기록할까요?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>⏱️ 타이머 방식 (시작/종료)</h3>
+      <p>"출근 중 💩" 버튼 → 타이머 시작 → 완료 버튼 → 시간 기록 + 시급 계산</p>
+      <p style="color:#888;font-size:0.9em;">✅ 정확한 시간 측정, 시급 계산에 최적 / ❌ 종료 누르는 걸 잊을 수 있음</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>✅ 원탭 출석 체크</h3>
+      <p>하루에 한 번 "오늘 쌌다!" 버튼만 누르면 끝. 시간은 평균값(5분) 자동 적용</p>
+      <p style="color:#888;font-size:0.9em;">✅ 초간단, 허들 낮음 / ❌ 시간 측정 재미 없음, 개인화 약함</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>🔄 하이브리드 (추천)</h3>
+      <p><strong>기본:</strong> 원탭 출석 (간편 모드)<br/>
+      <strong>선택:</strong> 타이머 시작으로 정확한 시간 측정 (프로 모드)<br/>
+      사용자가 원하는 방식 선택 가능</p>
+      <p style="color:#888;font-size:0.9em;">✅ 간편함 + 정밀함 둘 다 / ❌ UI 분기 필요</p>
+    </div>
+  </div>
+</div>

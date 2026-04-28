@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd \\\"/Users/openmacm4/Downloads/Dev/02_앱 보완/appintoss_싸월급\\\" && grep -E \\\"undici\\\" package.json && echo \\\"---\\\" && ls -la public/ssawolgeup* 2>&1\",\"description\":\"Check undici dep + cert fil...",
+  "error": "Exit code 1",
+  "timestamp": "2026-04-27T14:06:34.662Z",
+  "retry_count": 1
+}

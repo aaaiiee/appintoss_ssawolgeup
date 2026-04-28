@@ -1,0 +1,323 @@
+{
+  "timestamp": "2026-03-28T04:39:41.698Z",
+  "reason": "compaction",
+  "status": {
+    "version": "3.0",
+    "lastUpdated": "2026-03-28T04:36:30.791Z",
+    "activeFeatures": [
+      "apps-in-toss-fullstack-templates",
+      "ui",
+      "appintoss_6",
+      "test",
+      "stores",
+      "_lib",
+      "layout"
+    ],
+    "primaryFeature": "apps-in-toss-fullstack-templates",
+    "features": {
+      "apps-in-toss-fullstack-templates": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-08T16:14:21.988Z",
+          "lastUpdated": "2026-03-08T16:14:21.988Z"
+        },
+        "lastFile": "C:\\Users\\hpcra\\apps-in-toss-fullstack-templates\\vite.config.ts",
+        "stateMachine": {
+          "currentState": "do",
+          "previousState": null,
+          "stateHistory": [],
+          "retryCount": 0,
+          "maxRetries": 5,
+          "circuitBreakerOpen": false
+        },
+        "metrics": {
+          "qualityScore": null,
+          "conventionCompliance": null,
+          "apiCompliance": null,
+          "cycleTimeMs": null,
+          "iterationEfficiency": null
+        },
+        "phaseTimestamps": {},
+        "automationLevel": 2
+      },
+      "ui": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-08T16:17:42.661Z",
+          "lastUpdated": "2026-03-08T16:19:57.836Z"
+        },
+        "lastFile": "C:\\Users\\hpcra\\apps-in-toss-fullstack-templates\\src\\components\\ui\\textarea.tsx",
+        "stateMachine": {
+          "currentState": "do",
+          "previousState": null,
+          "stateHistory": [],
+          "retryCount": 0,
+          "maxRetries": 5,
+          "circuitBreakerOpen": false
+        },
+        "metrics": {
+          "qualityScore": null,
+          "conventionCompliance": null,
+          "apiCompliance": null,
+          "cycleTimeMs": null,
+          "iterationEfficiency": null
+        },
+        "phaseTimestamps": {},
+        "automationLevel": 2
+      },
+      "appintoss_6": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-27T12:50:54.922Z",
+          "lastUpdated": "2026-03-28T04:36:30.791Z"
+        },
+        "lastFile": "/Users/openmacm4/Downloads/Dev/appintoss_6/src/App.tsx"
+      },
+      "test": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-27T12:51:15.270Z",
+          "lastUpdated": "2026-03-27T12:54:43.686Z"
+        },
+        "lastFile": "/Users/openmacm4/Downloads/Dev/appintoss_6/src/test/calculations.test.ts"
+      },
+      "stores": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-27T12:51:30.558Z",
+          "lastUpdated": "2026-03-27T12:54:10.466Z"
+        },
+        "lastFile": "/Users/openmacm4/Downloads/Dev/appintoss_6/src/stores/authStore.ts"
+      },
+      "_lib": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-27T12:52:40.691Z",
+          "lastUpdated": "2026-03-27T12:52:40.691Z"
+        },
+        "lastFile": "/Users/openmacm4/Downloads/Dev/appintoss_6/api/_lib/supabase.ts"
+      },
+      "layout": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-27T12:54:33.533Z",
+          "lastUpdated": "2026-03-27T12:54:35.699Z"
+        },
+        "lastFile": "/Users/openmacm4/Downloads/Dev/appintoss_6/src/components/layout/PageLayout.tsx"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-03-08T14:40:18.061Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-03-28T04:36:30.791Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-08T16:14:21.988Z",
+        "feature": "apps-in-toss-fullstack-templates",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:17:42.661Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:19:56.862Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-08T16:19:57.836Z",
+        "feature": "ui",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:50:54.922Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:02.938Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:09.103Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:15.270Z",
+        "feature": "test",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:30.558Z",
+        "feature": "stores",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:34.554Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:51:42.141Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:52:40.691Z",
+        "feature": "_lib",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:53:22.980Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:53:53.654Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:03.330Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:08.685Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:10.466Z",
+        "feature": "stores",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:14.617Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:30.921Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:33.533Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:35.699Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:43.686Z",
+        "feature": "test",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T12:54:45.005Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-28T04:36:23.180Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-28T04:36:30.791Z",
+        "feature": "appintoss_6",
+        "phase": "do",
+        "action": "updated"
+      }
+    ],
+    "stateMachine": {
+      "defaultWorkflow": "default",
+      "activeWorkflows": {},
+      "totalTransitions": 0
+    },
+    "automation": {
+      "globalLevel": 2,
+      "trustScore": 40,
+      "pendingApprovals": 0,
+      "lastGateResult": null
+    },
+    "team": {
+      "enabled": true,
+      "stateFile": ".bkit/runtime/agent-state.json",
+      "eventsFile": ".bkit/runtime/agent-events.jsonl"
+    }
+  }
+}

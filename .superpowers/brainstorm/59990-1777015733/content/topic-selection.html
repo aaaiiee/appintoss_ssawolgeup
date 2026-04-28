@@ -1,0 +1,145 @@
+<h2>🎨 무엇을 브레인스토밍할까요?</h2>
+<p class="subtitle">싸월급 앱의 개선 주제 — 클릭하여 선택하세요</p>
+
+<style>
+  .topic-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  @media (max-width: 700px) {
+    .topic-cards { grid-template-columns: 1fr; }
+  }
+  .topic-card {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .topic-card:hover { border-color: #FF6B35; transform: translateY(-2px); }
+  .topic-card.selected { border-color: #FF6B35; background: #2a1510; }
+  .topic-card h3 { margin: 8px 0 4px 0; color: #fff; font-size: 16px; }
+  .topic-card p { color: #888; font-size: 12px; margin: 0 0 12px 0; line-height: 1.5; }
+  .topic-card .letter-chip {
+    display: inline-block;
+    background: #FF6B35;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 6px;
+  }
+  .mini-mockup {
+    background: #0A0A0A;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 10px;
+    color: #666;
+  }
+  .mock-box {
+    background: #222;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #aaa;
+  }
+  .mock-box.accent { background: #FF6B35; color: #fff; font-weight: bold; text-align: center; }
+  .mock-box.coin { background: #1a1a2e; color: #FFD700; }
+  .mock-box.pts { background: #1a1a2e; color: #3182F6; }
+  .mock-chart { height: 40px; background: linear-gradient(to top, #FF6B3540, transparent); border-bottom: 1px solid #FF6B35; border-radius: 4px; display: flex; align-items: flex-end; padding: 4px; }
+  .bar { flex: 1; background: #FF6B35; margin: 0 1px; border-radius: 2px 2px 0 0; }
+  .timer-circle { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #FF6B35; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 12px; }
+</style>
+
+<div class="topic-cards options" data-multiselect>
+
+  <div class="topic-card option" data-choice="home" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">A</span><strong style="color:#fff;">홈 화면 레이아웃</strong></div>
+    <p>가장 많이 보는 첫 화면. 수익 카드, 체크인 버튼, 빠른 통계의 배치와 시각 계층</p>
+    <div class="mini-mockup">
+      <div class="mock-box" style="text-align:center;">💰 오늘 수익 3,287원</div>
+      <div class="mock-box accent">💩 체크인하기</div>
+      <div style="display:flex;gap:4px;">
+        <div class="mock-box" style="flex:1;">📅 3일</div>
+        <div class="mock-box" style="flex:1;">🪙 150</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-card option" data-choice="stats" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">B</span><strong style="color:#fff;">Stats 그래프 시각화</strong></div>
+    <p>월별/주별 수익 그래프, 캘린더 히트맵, 월급 환산 시각화</p>
+    <div class="mini-mockup">
+      <div class="mock-box">이번 달 42,530원</div>
+      <div class="mock-chart">
+        <div class="bar" style="height:30%"></div>
+        <div class="bar" style="height:60%"></div>
+        <div class="bar" style="height:80%"></div>
+        <div class="bar" style="height:45%"></div>
+        <div class="bar" style="height:90%"></div>
+        <div class="bar" style="height:70%"></div>
+        <div class="bar" style="height:55%"></div>
+      </div>
+      <div class="mock-box" style="font-size:9px;text-align:center;">일별 수익 추이</div>
+    </div>
+  </div>
+
+  <div class="topic-card option" data-choice="timer" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">C</span><strong style="color:#fff;">타이머 UX</strong></div>
+    <p>실시간 카운터, 진행 원형 애니메이션, 돈이 쌓이는 시각 효과</p>
+    <div class="mini-mockup">
+      <div class="timer-circle">05:23</div>
+      <div class="mock-box" style="text-align:center;color:#FFD700;">💰 +287원 (상승중)</div>
+      <div class="mock-box" style="text-align:center;font-size:9px;">시급 9,860원 기준</div>
+    </div>
+  </div>
+
+  <div class="topic-card option" data-choice="checkin" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">D</span><strong style="color:#fff;">체크인 성공 피드백</strong></div>
+    <p>리워드 획득 순간의 애니메이션, 연속 출석 강조, 재방문 동기부여</p>
+    <div class="mini-mockup" style="align-items:center;justify-content:center;">
+      <div style="font-size:32px;">🎉</div>
+      <div class="mock-box" style="color:#FFD700;font-weight:bold;">+150 🪙 획득!</div>
+      <div class="mock-box" style="font-size:9px;">🔥 3일 연속 · 1.5배 부스트</div>
+    </div>
+  </div>
+
+  <div class="topic-card option" data-choice="shop" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">E</span><strong style="color:#fff;">상점/교환 페이지</strong></div>
+    <p>3개 탭(미션/교환/상점) 구조, 교환 확인 모달, 티어 카드 디자인</p>
+    <div class="mini-mockup">
+      <div style="display:flex;gap:4px;">
+        <div class="mock-box" style="flex:1;font-size:9px;">미션</div>
+        <div class="mock-box accent" style="flex:1;font-size:9px;">교환</div>
+        <div class="mock-box" style="flex:1;font-size:9px;">상점</div>
+      </div>
+      <div class="mock-box coin">1,000🪙 → 100P</div>
+      <div class="mock-box coin">5,000🪙 → 500P</div>
+    </div>
+  </div>
+
+  <div class="topic-card option" data-choice="onboarding" onclick="toggleSelect(this)">
+    <div><span class="letter-chip">F</span><strong style="color:#fff;">온보딩 · 인트로</strong></div>
+    <p>첫 진입 화면의 컨셉 소개, CTA 강화, 전역 카운터 활용</p>
+    <div class="mini-mockup" style="align-items:center;justify-content:center;">
+      <div style="font-size:28px;">💩💰</div>
+      <div class="mock-box" style="font-size:9px;">전국 직장인 152만원</div>
+      <div class="mock-box accent">토스로 시작하기</div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px;font-size:12px;color:#666;">
+  💡 여러 개 선택 가능 (우선순위 높은 순서로). 모두 보면서 고르면 전체 흐름도 감잡기 쉬워요.
+</p>
